@@ -1,0 +1,72 @@
+FILENAME = "posts.txt"
+
+with open(FILENAME, "r", encoding="utf8") as f:
+    lines = f.readlines()
+
+
+posts: list[dict[str, str]] = []
+curr_post = {}
+
+for line in lines:
+    patterns = [
+        ('title', 'Tytuł:'),
+        ('photos', 'Nazwa zdjęcia:'),
+        ('description', 'Opis:'),
+        ('date', 'Data:'),
+        ('photos_count', 'Liczba zdjęć:'),
+    ]
+    for (dict_name, pattern) in patterns:
+        if line.strip().startswith(pattern):
+            if pattern == "Tytuł:":
+                posts.append(curr_post)
+                curr_post = {}
+            curr_post[dict_name] = line.strip().removeprefix(pattern).strip()
+    # print([line.startswith(pattern) for (_, pattern) in patterns])
+    if not any([line.startswith(pattern) for (_, pattern) in patterns]):
+        print(line)
+        curr_post['description'] += "\n" + line.strip()
+
+def format_title(date, title)
+    alphabet = 'abcdefghijklmnopqrstuvwxyz1234567890'
+    replace_dict = {
+        ' ': '-',
+        '.': '',
+        ',': '',
+        'ł': 'l',
+        'ą': 'a',
+        'ę': 'e',
+        'ś': 's',
+        'ć': 'c',
+        'ż': 'z',
+        'ź': 'z',
+        'ó': 'o',
+        '_': '-'
+    }
+    for alpha in alphabet:
+        replace_dict[alpha] = alpha
+    title = "".join([replace_dict[c] if c in replace_dict else '' for c in title.lower()])
+
+    return date + '-' + title.lower().replace(' ', '-')
+
+POST_DIR = '_posts/'
+
+# Tytuł: Kongres Studentów i Absolwentów Psychologii w Murzasichle.
+for post in posts:
+    filename = format_title(post['date'], post['title']) + ".md"
+    title = post['title']
+    date = post['date']
+    description = post['description']
+    photos = post['photos']
+    photos_count = post['photos_count']
+    content = f"""
+---
+layout: post
+title: {title}
+image:
+---
+# Photos: {photos}, conut {photos_count}
+# Date: {date}
+{description}
+    """
+    with open(POST_DIR + "/" + filename, "rw") as f:
+        f.write(content)
