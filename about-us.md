@@ -1,8 +1,6 @@
 ---
 layout: page
-title: Generic
-description: Aliquam ut ex ut interdum donec amet imperdiet eleifend
-published: false
+title: O nas
 ---
 
 ### Lorem ipsum dolor

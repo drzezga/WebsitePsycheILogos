@@ -1,4 +1,4 @@
-# Spectral - Jekyll Theme
+# Strona SKN Psyche i Logos
 
 A Jekyll version of the "Spectral" theme by [HTML5 UP](https://html5up.net/).
 

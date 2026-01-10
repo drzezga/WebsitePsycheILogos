@@ -23,10 +23,12 @@ for line in lines:
             curr_post[dict_name] = line.strip().removeprefix(pattern).strip()
     # print([line.startswith(pattern) for (_, pattern) in patterns])
     if not any([line.startswith(pattern) for (_, pattern) in patterns]):
-        print(line)
-        curr_post['description'] += "\n" + line.strip()
+        # print(line)
+        curr_post['description'] += "\n\n" + line.strip()
 
-def format_title(date, title)
+posts = posts[1:]
+
+def format_title(date, title):
     alphabet = 'abcdefghijklmnopqrstuvwxyz1234567890'
     replace_dict = {
         ' ': '-',
@@ -48,6 +50,9 @@ def format_title(date, title)
 
     return date + '-' + title.lower().replace(' ', '-')
 
+# print(posts)
+
+# print([('date' in post, post['title']) for post in posts])
 POST_DIR = '_posts/'
 
 # Tytuł: Kongres Studentów i Absolwentów Psychologii w Murzasichle.
@@ -56,17 +61,21 @@ for post in posts:
     title = post['title']
     date = post['date']
     description = post['description']
-    photos = post['photos']
-    photos_count = post['photos_count']
-    content = f"""
+    if 'photos' in post:
+        photos = post['photos']
+        photos_count = post['photos_count']
+    else:
+        photos = ''
+        photos_count = 0
+    content = f"""\
 ---
 layout: post
 title: {title}
 image:
+photos: "{photos}, count {photos_count}"
+date: "{date}"
 ---
-# Photos: {photos}, conut {photos_count}
-# Date: {date}
 {description}
     """
-    with open(POST_DIR + "/" + filename, "rw") as f:
+    with open(POST_DIR + "/" + filename, "w") as f:
         f.write(content)
