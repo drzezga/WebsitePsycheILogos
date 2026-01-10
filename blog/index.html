@@ -1,19 +1,23 @@
 ---
 layout: page
 title: Wszystkie posty
+paginated: true
 ---
 
 {% include pagination.html %}
 
-<br/>
+<hr />
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <a href="{{ post.url }}"><h3 style="text-align: initial; margin-bottom: 0">{{ post.title }}</h3></a>
   <p class="date tagline">{{ post.date | date: "%d-%m-%Y" }}</p>
+  <hr />
+
   <!--<div class="content">
     {{ post.content }}
   </div>-->
 {% endfor %}
 
 {% include pagination.html %}
+<br/>

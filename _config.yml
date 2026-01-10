@@ -1,5 +1,5 @@
 # Site settings
-title: SKN Psyche i Logos
+title: Psyche i Logos
 email: youremailaddress@gmail.com
 description: Strona internetowa Studenckiego Koła Naukowego Psyche i Logos
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -14,7 +14,7 @@ tiles-count: 3
 featured-image-source:
 
 # Pagination
-paginate: 5
+paginate: 8
 paginate_path: "/blog/page:num/"
 
 # Social settings

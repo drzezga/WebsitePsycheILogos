@@ -14,6 +14,3 @@ Tematyką warsztatów pierwszych było “Jak zdać studia i nie oszaleć - radz
 Drugi warsztat “Ucz się mądrzej, nie więcej - warsztaty efektywnej nauki” natomiast przeprowadziły Dominika Agaciak, Aleksandra Szeremeta, Martyna Budziak i Monika Baron. Dziewczyny przekazały, jak efektywnie planować naukę, jak radzić sobie z trudnymi egzaminami oraz jak znaleźć równowagę między pracą a odpoczynkiem
 
 Bardzo dziękujemy za liczną obecność! Cieszymy się, że możemy podejmować takie współpracę
-
-
-    

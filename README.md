@@ -1,8 +1,14 @@
 # Strona SKN Psyche i Logos
 
-A Jekyll version of the "Spectral" theme by [HTML5 UP](https://html5up.net/).
-
-![Spectral Theme](screenshot.jpg "Spectral Theme")
+## TODO:
+ - [ ] Responsywne logo w lewym górnym rogu
+ - [ ] Responsywne tła w postach
+ - [ ] Zdjęcia w postach
+ - [ ] Czcionka
+ - [ ] Tekst zamiast placeholderów
+ - [ ] Kolorystyka na stronie głównej
+ - [ ] Sekcja najnowszych postów na stronie głównej
+ - [ ] Przejrzenie postów w poszukiwaniu błędów
 
 # How to Use
 
@@ -12,12 +18,6 @@ and [creating pages](https://jekyllrb.com/docs/pages/).
 
 - **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
 - **GitHub**: Fork this reposity and create a branch named `gh-pages`, then start editing the `_config.yml` file! The `.gitlab-ci.yml` file is only needed for GitLab Pages, so feel free to delete this if you are using GitHub instead.
-
-# Added Features
-
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* **Coming soon**: Set **featured images** in front matter.
-* **Coming soon**: Front page sections automatically pull from posts.
 
 # Credits
 
